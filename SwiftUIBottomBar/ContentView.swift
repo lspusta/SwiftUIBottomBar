@@ -8,11 +8,11 @@
 import SwiftUI
 import BottomBar_SwiftUI
 
-let items: [BottomBarItem] = [
-    BottomBarItem(icon: "house.fill", title: "Home", color: .purple),
-    BottomBarItem(icon: "heart", title: "Likes", color: .pink),
+let bottomBarItems: [BottomBarItem] = [
+    BottomBarItem(icon: "house.fill", title: "Home", color: .blue),
+    BottomBarItem(icon: "heart", title: "Likes", color: .green),
     BottomBarItem(icon: "message", title: "Messages", color: .orange),
-    BottomBarItem(icon: "person.fill", title: "Profile", color: .blue)
+    BottomBarItem(icon: "person.fill", title: "Profile", color: .red)
 ]
 
 struct BasicView: View {
@@ -23,14 +23,13 @@ struct BasicView: View {
 }
 
 var destination: some View {
-    Text(detailText)
+    Text(detailText + " Content")
         .navigationBarTitle(Text(detailText))
 }
     
 var navigateLinkSettingsStyle: some View {
     NavigationLink(destination: destination) {
         VStack {
-            
             SettingsRow(imageName: "square.and.arrow.up", title: "Action") {
                
             }
@@ -57,39 +56,37 @@ var navigateButton: some View {
         }
     }
 }
-
-
+    
+var homeText: some View {
+    Text(item.title)
+}
 
 var body: some View {
     VStack {
         navigateLinkSettingsStyle
         Spacer()
+        homeText
         Spacer()
-    
         navigateButton
         }
     }
 }
 
-
-
 struct ContentView : View {
     @State private var selectedIndex: Int = 0
 
     var selectedItem: BottomBarItem {
-        items[selectedIndex]
+        bottomBarItems[selectedIndex]
     }
     
     
 
     var body: some View {
             NavigationView {
-        
                 VStack {
-                    
                     BasicView(item: selectedItem)
                         .navigationBarTitle(Text(selectedItem.title))
-                    BottomBar(selectedIndex: $selectedIndex, items: items)
+                    BottomBar(selectedIndex: $selectedIndex, items: bottomBarItems)
                 }
             }
         }
