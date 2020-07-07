@@ -12,6 +12,9 @@
 		BD45271C24B4B7D100E7A8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD45271B24B4B7D100E7A8B3 /* Assets.xcassets */; };
 		BD45271F24B4B7D100E7A8B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD45271E24B4B7D100E7A8B3 /* Preview Assets.xcassets */; };
 		BD45272824B4B87500E7A8B3 /* BottomBar-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BD45272724B4B87500E7A8B3 /* BottomBar-SwiftUI */; };
+		BD45272A24B4BB1500E7A8B3 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45272924B4BB1500E7A8B3 /* SettingsRow.swift */; };
+		BD45272C24B4BB2600E7A8B3 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45272B24B4BB2600E7A8B3 /* FeedbackManager.swift */; };
+		BD45272E24B4BB2E00E7A8B3 /* extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45272D24B4BB2E00E7A8B3 /* extension+View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		BD45271B24B4B7D100E7A8B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD45271E24B4B7D100E7A8B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD45272024B4B7D100E7A8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD45272924B4BB1500E7A8B3 /* SettingsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
+		BD45272B24B4BB2600E7A8B3 /* FeedbackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
+		BD45272D24B4BB2E00E7A8B3 /* extension+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "extension+View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,10 @@
 		BD45271624B4B7CF00E7A8B3 /* SwiftUIBottomBar */ = {
 			isa = PBXGroup;
 			children = (
+				BD45272D24B4BB2E00E7A8B3 /* extension+View.swift */,
+				BD45272B24B4BB2600E7A8B3 /* FeedbackManager.swift */,
 				BD45271724B4B7CF00E7A8B3 /* SwiftUIBottomBarApp.swift */,
+				BD45272924B4BB1500E7A8B3 /* SettingsRow.swift */,
 				BD45271924B4B7CF00E7A8B3 /* ContentView.swift */,
 				BD45271B24B4B7D100E7A8B3 /* Assets.xcassets */,
 				BD45272024B4B7D100E7A8B3 /* Info.plist */,
@@ -146,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD45272C24B4BB2600E7A8B3 /* FeedbackManager.swift in Sources */,
+				BD45272E24B4BB2E00E7A8B3 /* extension+View.swift in Sources */,
 				BD45271A24B4B7CF00E7A8B3 /* ContentView.swift in Sources */,
 				BD45271824B4B7CF00E7A8B3 /* SwiftUIBottomBarApp.swift in Sources */,
+				BD45272A24B4BB1500E7A8B3 /* SettingsRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

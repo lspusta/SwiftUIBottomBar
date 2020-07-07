@@ -26,6 +26,21 @@ var destination: some View {
     Text(detailText)
         .navigationBarTitle(Text(detailText))
 }
+    
+var navigateLinkSettingsStyle: some View {
+    NavigationLink(destination: destination) {
+        VStack {
+            
+            SettingsRow(imageName: "square.and.arrow.up", title: "Action") {
+               
+            }
+        }
+        .settingsBackground()
+        
+    }
+    
+    
+}
 
 var navigateButton: some View {
     NavigationLink(destination: destination) {
@@ -47,13 +62,16 @@ var navigateButton: some View {
 
 var body: some View {
     VStack {
+        navigateLinkSettingsStyle
         Spacer()
         Spacer()
-
+    
         navigateButton
         }
     }
 }
+
+
 
 struct ContentView : View {
     @State private var selectedIndex: Int = 0
@@ -61,16 +79,20 @@ struct ContentView : View {
     var selectedItem: BottomBarItem {
         items[selectedIndex]
     }
+    
+    
 
-var body: some View {
-        NavigationView {
-            VStack {
-                BasicView(item: selectedItem)
-                    .navigationBarTitle(Text(selectedItem.title))
-                BottomBar(selectedIndex: $selectedIndex, items: items)
+    var body: some View {
+            NavigationView {
+        
+                VStack {
+                    
+                    BasicView(item: selectedItem)
+                        .navigationBarTitle(Text(selectedItem.title))
+                    BottomBar(selectedIndex: $selectedIndex, items: items)
+                }
             }
         }
-    }
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
